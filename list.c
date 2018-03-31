@@ -43,3 +43,24 @@ Status ClearList(SqList *L)
 		L->length=0;
 		return OK;
 }
+
+//to check whether the list is empty
+Status isEmpty(const SqList L)
+{
+		if(0==L.length)
+		{
+				return TRUE;
+		}
+		else
+		{
+				return FALSE;
+		}
+}
+
+//get the length of list
+Status getLength(const SqList L)
+{
+		return L.length;
+}
+
+//get the element on its location
