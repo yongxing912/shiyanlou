@@ -64,3 +64,12 @@ Status getLength(const SqList L)
 }
 
 //get the element on its location
+Status GetElem(const SqList L, int i,Elemtype *e)
+{
+		if (i<1||i>L.length)
+		{
+				return ERROR;
+		}
+		*e = L.elemp[i-1];
+		return OK;
+}
