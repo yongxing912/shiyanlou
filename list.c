@@ -73,3 +73,25 @@ Status GetElem(const SqList L, int i,Elemtype *e)
 		*e = L.elemp[i-1];
 		return OK;
 }
+//compare two elements for equality
+Status compare(Elemtype e1, Elemtype e2)
+{
+		if(e1==e2)
+		{
+				rerturn 0;
+		}
+		else if (e1<e2)
+		{
+				return -1
+		}
+		else
+		{
+				return 1;
+		}
+}
+
+//find element
+Status FindElem(const SqList L,Elemtype e,Status(*compare)(Elemtype,Elemtype))
+{
+		{
+
