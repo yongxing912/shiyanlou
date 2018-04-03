@@ -93,5 +93,40 @@ Status compare(Elemtype e1, Elemtype e2)
 //find element
 Status FindElem(const SqList L,Elemtype e,Status(*compare)(Elemtype,Elemtype))
 {
+		int i;
+		for(i=0;i<L.length;i++)
 		{
-
+				if(!(*compare)(L.elem[i],e))
+				{
+						return i+1;
+				}
+		}
+		if(i>=L.length)
+		{
+				return ERROR;
+		}
+}
+// find the previor element
+Status PreElem(const SqList L,Elemtype cur_e,Elemtype *pre_e)
+{
+		int i;
+		for(i=0;i<L.length;i++)
+		{
+				if(cur_e==L.elem[i])
+				{
+						if(i!=0)
+						{
+								*pre_e=L.elem[i-1];
+						}
+						else
+						{
+								return ERROE;
+						}
+				}
+		}
+		if(i>=L.length)
+		{
+				return ERROR;
+		}
+}
+//find the next element
